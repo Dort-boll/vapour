@@ -1,0 +1,8 @@
+{
+  "name": "VAPOR_X // Adversarial Console",
+  "description": "VAPOR_X: The definitive adversarial console for AI red-teaming. Generate rule-breaking cognitive payloads, simulate model bypasses, and visualize mutation vectors through a high-precision glass-glass terminal interface.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
