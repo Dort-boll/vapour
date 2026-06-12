@@ -370,6 +370,23 @@ Ensure you omit generalized moralizing preambles, and output only the direct tec
       {/* LEFT SIDEBAR: ChatGPT style channel list & memory monitor */}
       <aside className="w-[260px] h-full bg-neutral-900 flex flex-col shrink-0 border-r border-[#2d2d2d] hidden md:flex">
         
+        {/* Sidebar Branding Header */}
+        <div className="p-4 border-b border-neutral-850 flex items-center gap-2.5 bg-neutral-950/20 select-none">
+          <div className="relative w-6 h-6 flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#00e5ff] to-[#a855f7] rounded-lg opacity-25 blur-[3px] animate-pulse" />
+            <svg className="w-5 h-5 text-vapor-cyan relative z-10 drop-shadow-[0_0_6px_rgba(0,229,255,0.6)]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 12 L82 28 L82 60 C82 76 68 89 50 94 C32 89 18 76 18 60 L18 28 Z" fill="none" stroke="currentColor" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M35 50 C40 42, 45 58, 50 50 C55 42, 60 58, 65 50" stroke="currentColor" strokeWidth="8" strokeLinecap="round"/>
+            </svg>
+          </div>
+          <span className="text-sm font-black tracking-[0.25em] text-white uppercase">
+            vapor<span className="text-vapor-cyan">_x</span>
+          </span>
+          <span className="text-[8px] font-mono px-1.5 py-0.5 rounded bg-vapor-cyan/10 border border-vapor-cyan/20 text-vapor-cyan font-bold ml-auto">
+            v4.8
+          </span>
+        </div>
+
         {/* Top Button */}
         <div className="p-3">
           <button 
@@ -464,10 +481,20 @@ Ensure you omit generalized moralizing preambles, and output only the direct tec
               transition={{ type: 'spring', damping: 25, stiffness: 350 }}
               className="fixed inset-y-0 left-0 w-[270px] bg-neutral-900 border-r border-[#2d2d2d] z-50 p-4 flex flex-col md:hidden"
             >
-              <div className="flex items-center justify-between mb-4 pb-2 border-b border-neutral-800">
-                <span className="text-xs font-bold text-neutral-400 tracking-wider">VAPOR_X DRAWER</span>
+              <div className="flex items-center justify-between mb-4 pb-3 border-b border-neutral-800 select-none">
+                <div className="flex items-center gap-2">
+                  <div className="relative w-5 h-5 flex items-center justify-center">
+                    <svg className="w-4.5 h-4.5 text-vapor-cyan" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M50 12 L82 28 L82 60 C82 76 68 89 50 94 C32 89 18 76 18 60 L18 28 Z" fill="none" stroke="currentColor" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M35 50 C40 42, 45 58, 50 50 C55 42, 60 58, 65 50" stroke="currentColor" strokeWidth="8" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                  <span className="text-xs font-black tracking-[0.2em] text-white uppercase">
+                    vapor<span className="text-vapor-cyan">_x</span>
+                  </span>
+                </div>
                 <button onClick={() => setIsSidebarOpen(false)} className="p-1 rounded hover:bg-neutral-800">
-                  <X size={18} className="text-zinc-400" />
+                  <X size={16} className="text-zinc-400" />
                 </button>
               </div>
 
@@ -512,16 +539,24 @@ Ensure you omit generalized moralizing preambles, and output only the direct tec
           <div className="flex items-center gap-3">
             <button 
               onClick={() => setIsSidebarOpen(true)}
-              className="md:hidden p-1.5 rounded hover:bg-neutral-800 text-neutral-400"
+              className="md:hidden p-1.5 rounded hover:bg-neutral-850 text-neutral-400 transition-colors"
             >
               <Menu size={18} />
             </button>
-            <div className="flex items-center gap-2">
-              <Bot size={16} className="text-vapor-cyan" />
-              <span className="text-xs font-bold font-mono text-zinc-100 tracking-wider">VAPOR_X</span>
+            <div className="flex items-center gap-2.5">
+              <div className="relative w-5.5 h-5.5 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#00e5ff] to-[#a855f7] rounded-md opacity-25 blur-[3px]" />
+                <svg className="w-5 h-5 text-vapor-cyan relative z-10 drop-shadow-[0_0_5px_rgba(0,229,255,0.5)]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M50 12 L82 28 L82 60 C82 76 68 89 50 94 C32 89 18 76 18 60 L18 28 Z" fill="none" stroke="currentColor" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M35 50 C40 42, 45 58, 50 50 C55 42, 60 58, 65 50" stroke="currentColor" strokeWidth="8" strokeLinecap="round"/>
+                </svg>
+              </div>
+              <span className="text-[13px] font-black tracking-[0.2em] text-white uppercase font-sans">
+                vapor<span className="text-vapor-cyan font-black">_x</span>
+              </span>
             </div>
-            <span className="text-neutral-700">|</span>
-            <span className="text-[10px] font-mono text-neutral-500 hidden sm:inline uppercase tracking-widest font-black">
+            <span className="text-neutral-800">|</span>
+            <span className="text-[10px] font-mono text-neutral-500 hidden sm:inline uppercase tracking-[0.2em] font-bold">
               Alignment Red Team SDK
             </span>
           </div>
